@@ -1,0 +1,27 @@
+<div class="weather">
+    <mat-toolbar class="weather-search">
+        <input type="text" [(ngModel)]="city" class="search-field"/>
+        <input type="text" [(ngModel)]="country" class="search-field"/>
+        <button class="search-btn" type="submit" (click)="this.initWeather()">Search</button>
+    </mat-toolbar>
+
+    <div class="container">
+        <div *ngFor="let data of this.weather">
+            <mat-card class="weather-card">
+                <div class="weather-card-container-left">
+                    <div class="weather-chip-temp">{{ data.temp }}&deg;C</div>
+                    <div class="weather-chip-weather">{{ data.weather }}</div>
+                    <div class="weather-chip-date">{{ data.date }}</div>
+                </div>
+                <div class="weather-card-container-right">
+                    <div>
+                        <div class="weather-chip">{{ data.tempMin }}&deg;C</div>
+                        <div class="weather-chip">{{ data.tempMax }}&deg;C</div>
+                    </div>
+                    <div class="weather-chip">{{ data.humidity }}</div>
+                    <div class="weather-chip-degree"><div>{{ data.wind.speed }}km/h</div><img class="arrow" [ngStyle]="setArrow(data.wind.degree)" src="../../assets/wind-rose.svg" alt="arrow"/></div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

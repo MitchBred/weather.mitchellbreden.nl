@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600&display=swap');
+
+@import './weather-theme.scss';
+@import './variables.scss';
+
+html, body {
+    font-family: 'Nunito';
+}
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    background-color: rgba(9, 132, 227,1.0);
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-search {
+        background-color: rgba(116, 185, 255,1.0);
+        display: flex;
+        align-items: center;
+
+        .search-field {
+            height: $base-height;
+            width: $base-width;
+            border: none;
+            background-color: rgba(9, 132, 227,1.0);
+            margin: 5px;
+            padding: 2px;
+            border-radius: 5px;
+            font-size: $font-size * 1.2;
+
+            &:active,
+            &:hover,
+            &:focus,
+            &:not(:disabled):not(.disabled):active:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled).active {
+                background-color: rgba(9, 132, 227,1.0);
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        .search-btn {
+            font-family: 'Comfortaa';
+            font-size: $font-size * 1.1;
+            background-color: $color-primary;
+            color: $color-white;
+            height: $base-height;
+            width: $base-width /1.5;
+            border: none;
+            margin: 2px;
+            padding: 2px;
+            border-radius: 4px;
+
+            &:active,
+            &:hover,
+            &:focus,
+            &:not(:disabled):not(.disabled):active:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled).active {
+                background-color: rgba(9, 132, 227,1.0);
+                outline: 0;
+                box-shadow: none;
+                border: 1px solid rgba(9, 132, 227,1.0);
+            }
+        }
+    }
+
+    &-card {
+        width: 20rem;
+        margin: 2rem;
+        background-color: $color-secondary;
+        border-radius: 4px;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    &-chip {
+        color: $color-medium-gray;
+
+        &-temp {
+            font-family: 'Comfortaa';
+            font-size: $font-size *3;
+            font-weight: 400;
+            color: rgba(116, 185, 255,1.0);
+            margin-bottom: 1rem;
+        }
+        &-weather {
+            font-size: $font-size * 1.5;
+            color: $color-medium-gray;
+            font-weight: 300;
+        }
+        &-date {
+            color: $color-medium-gray;
+        }
+        &-degree {
+            color: $color-medium-gray;
+            display: flex;
+        }
+    }
+
+    .weather-card-container- {
+        display: flex;
+        flex-direction: column;
+
+        &left {
+            align-items: left;
+        }
+
+        &right {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.arrow {
+    margin-inline-start: 10px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}

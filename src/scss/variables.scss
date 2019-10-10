@@ -1,0 +1,12 @@
+@import './weather-theme.scss';
+
+$color-white: #FFFFFF;
+$color-medium-gray: map-get($weather-theme-primary, 500);
+$color-primary: map-get($weather-theme-primary, 500);
+$color-secondary: map-get($weather-theme-primary, 900);
+$color-accent: map-get($weather-theme-accent, 800);
+
+$base-height: 2rem;
+$base-width: $base-height * 5;
+
+$font-size: 1rem;
