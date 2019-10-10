@@ -1,5 +1,4 @@
 export interface IWeather {
-    date: string;
     temp: number;
     tempMin: number;
     tempMax: number;
@@ -9,5 +8,6 @@ export interface IWeather {
     wind: {
         speed: number;
         degree: number;
-    }
+    };
+  dt_txt: string;
 }

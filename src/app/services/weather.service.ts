@@ -26,7 +26,7 @@ export class WeatherService {
       list.forEach(weather => {
         const date = new Date(weather.dt_txt);
         const newWeather: IWeather = {
-          date: `${date.getHours()}:00 ${date.getDate()}-${date.getDay()}-${date.getFullYear()}`,
+          dt_txt: weather.dt_txt,
           temp: Math.round(weather.main.temp),
           tempMin: Math.round(weather.main.temp_min),
           tempMax: Math.round(weather.main.temp_max),
