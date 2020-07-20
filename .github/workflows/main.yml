@@ -1,19 +1,37 @@
 name: Build and Deploy
-on:
+on: # rebuild any PRs and main branch changes
+  pull_request:
   push:
     branches:
       - master
+
 jobs:
-  build:
-
+  build_and_test_action: # make sure build/ci work properly
     runs-on: ubuntu-latest
-
     steps:
-    - name: Angular Deploy gh-pages Actions
-      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.1
+    - uses: actions/checkout@v1
+    - run: |
+        npm install
+        npm run all
+  test_demo_app: # run the demo app's unit tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: |
+        npm install
+        npm run test:ci
+      working-directory: './weather-api-angular'
+  test_action_and_deploy_demo: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: 'Deploy demo app using action'
+      uses: ./
       with:
-        github_access_token: ${{ secrets.ACCESS_TOKEN }} # see the Configuration section for how you can create secrets
-        build_configuration: staging # The build environment for the app. please look configurations in your angular.json
-        base_href: /weather-api-angular/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        run_lint: true
+        github_access_token: ${{ secrets.ACCESS_TOKEN }}
+        build_configuration: master
+        base_href: /angular-deploy-gh-pages-actions/
         deploy_branch: gh-pages # The branch the action should deploy to.
-        build_folder: dist/OpenWeatherAngularApp # The folder where your project is supposed to be after running ng build by the action.
+        build_folder: /dist/OpenWeatherAngularApp # The folder the action should deploy.
+        angular_project_dir: OpenWeatherAngularApp
