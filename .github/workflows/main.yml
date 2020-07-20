@@ -16,7 +16,7 @@ jobs:
         run_lint: true
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: master
-        base_href: /angular-deploy-gh-pages-actions/
+        base_href: /weather-api-angular/
         deploy_branch: gh-pages # The branch the action should deploy to.
-        build_folder: /dist/OpenWeatherAngularApp # The folder the action should deploy.
+        build_folder: dist/OpenWeatherAngularApp # The folder the action should deploy.
         angular_project_dir: OpenWeatherAngularApp
