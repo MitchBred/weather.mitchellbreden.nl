@@ -10,8 +10,8 @@ import { IWeather } from '../shared/interfaces';
 })
 export class HomeComponent implements OnInit {
   weather: IWeather[];
-  city = 'Zwolle';
-  country = 'nl';
+  city = 'Kos';
+  country = 'gr';
 
   constructor(
     private weatherService: WeatherService
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   setArrow(degree){
     return {
       transform: `rotate(${degree + 180}deg)`,
-      
+
     }
   }
 
