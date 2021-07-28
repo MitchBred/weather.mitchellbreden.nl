@@ -11,7 +11,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  private key = 'dd6ae02360ac70b7c580755ac896adea';
+  private key = 'f8c1085b3b9c04464a66c6e0288b6086';
 
   public get(city, country) {
     const weatherArray: IWeather[] = this.getWeather(city, country);
