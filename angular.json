@@ -29,10 +29,10 @@
             ],
             "styles": [
               {
-                "input": "src/scss/weather-theme.scss"
+                "input": "src/scss/weather-theme.scss",
+                "inject": true
               },
               "src/scss/styles.scss"
-              
             ],
             "scripts": []
           },
@@ -47,7 +47,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
