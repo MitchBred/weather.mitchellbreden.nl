@@ -119,6 +119,9 @@
           }
         }
       }
-    }},
-  "defaultProject": "OpenWeatherAngularApp"
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
 }
