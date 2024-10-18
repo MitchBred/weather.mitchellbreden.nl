@@ -11,7 +11,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  private key = 'f8c1085b3b9c04464a66c6e0288b6086';
+  private key = '8515df84ce98b740779f788f70a9428d';
 
   public get(city, country) {
     const weatherArray: IWeather[] = this.getWeather(city, country);
@@ -49,7 +49,7 @@ export class WeatherService {
 
   private getWeatherData(city, country): Observable<any> {
     return this.http
-      .get(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&appid=${this.key}`)
+      .get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${this.key}`)
       .pipe(map((response: Response) => {
         return response;
       }));

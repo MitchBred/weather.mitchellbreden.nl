@@ -20,7 +20,7 @@ body {
     align-items: center;
 
     &-search {
-        background-color: rgba(116, 185, 255,1.0);
+        background-color: rgba(116, 185, 255,1.0) !important;
         display: flex;
         align-items: center;
 
@@ -51,7 +51,7 @@ body {
             background-color: $color-primary;
             color: $color-white;
             height: $base-height;
-            width: $base-width /1.5;
+            width: calc($base-width / 1.5);
             border: none;
             margin: 2px;
             padding: 2px;
@@ -111,7 +111,7 @@ body {
         flex-direction: column;
 
         &left {
-            align-items: left;
+            align-items: flex-start;
         }
 
         &right {

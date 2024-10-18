@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.initWeather();
-    console.log(this.weather)
   }
 
   initWeather() {
