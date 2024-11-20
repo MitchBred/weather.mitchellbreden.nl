@@ -14,7 +14,7 @@
     "@angular-eslint/schematics": "18.4.1",
     "@angular/animations": "^18.2.12",
     "@angular/cdk": "^18.2.13",
-    "@angular/common": "^18.2.12",
+    "@angular/common": "^19.0.0",
     "@angular/compiler": "^14.2.12",
     "@angular/core": "^15.2.10",
     "@angular/forms": "^18.2.12",
