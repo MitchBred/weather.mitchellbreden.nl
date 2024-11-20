@@ -13,7 +13,7 @@
   "dependencies": {
     "@angular-eslint/schematics": "18.4.1",
     "@angular/animations": "^19.0.0",
-    "@angular/cdk": "^18.2.13",
+    "@angular/cdk": "^19.0.0",
     "@angular/common": "^19.0.0",
     "@angular/compiler": "^14.2.12",
     "@angular/core": "^15.2.10",
