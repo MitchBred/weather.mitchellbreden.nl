@@ -21,7 +21,7 @@
     "@angular/localize": "^19.2.2",
     "@angular/material": "^19.2.2",
     "@angular/platform-browser": "^19.2.1",
-    "@angular/platform-browser-dynamic": "^19.2.1",
+    "@angular/platform-browser-dynamic": "^19.2.2",
     "@angular/router": "^19.2.1",
     "http-proxy-middleware": "^3.0.3",
     "node-sass": "^9.0.0",
